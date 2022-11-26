@@ -1,31 +1,17 @@
-// Code your solutions in this file
-const names = ["Guadalupe", "Ollie", "Aki"];
-let length= names.length;
-
-
-function writeCards(names, event) {
-    for (let i = 0;i < length; i++) { 
-        console.log(`Thank you, ${names[i]}, for the ${event} gift!`);
+// Done 1
+function writeCards(names,event){
+    const messages = [];
+    for(let i = 0; i < names.length;i++) {
+           const thankYouMessage = `Thank you, ${names[i]}, for the wonderful ${event} gift!`
+           messages.push(thankYouMessage)
     }
-        return(`Thank you, ${names}, for the ${event} gift!`);
+    return messages;
 }
-console.log(writeCards(["Guadalupe", "Ollie", "Aki"], "surprise"));
-
-function countDown() {
-    var countDown = 10;
-    while (countDown > 0) {
-    console.log(countDown--);
-    }
-    return(countDown--);
+console.log(writeCards(["Guadalupe", "Ollie", "Aki"], "surprise"))
+ 
+function countDown(countup){
+    let i = 0
+    while (i <= countup) {
+        console.log(countup--);}
 }
-console.log(countDown(10));
-
-function countDowns() {
-    var countDowns= 4;
-    while (countDowns > 0) {
-        console.log(countDowns--);
-    }
-    return(countDowns--);
-}
-console.log(countDowns(4));
-
+countDown(10)
